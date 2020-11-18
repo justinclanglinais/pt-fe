@@ -3,19 +3,19 @@ import React, { Component } from 'react'
 class StudentList extends Component {
     render () {
         let { students } = this.props
-        function renderStudents(students) {
+        function renderStudents() {
             students.map( student => {
                 return (
                     <div>
-                        
+                        <StudentCard student={student} />
                     </div>
                 )
             })
         }
         return (
-            <div>
-
-            </div>
+            {renderStudents}
         )
     }
-}
+};
+
+export default StudentList;
