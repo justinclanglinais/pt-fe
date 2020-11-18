@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import StudentCard from './src/components/StudentCard.js'
 
 class StudentList extends Component {
     render () {
@@ -11,7 +12,7 @@ class StudentList extends Component {
                     </div>
                 )
             })
-        }
+        };
         return (
             {renderStudents}
         )
