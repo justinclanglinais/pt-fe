@@ -1,3 +1,3 @@
 class Student < ApplicationRecord
-    has_many :belt
+    has_many :belts
 end

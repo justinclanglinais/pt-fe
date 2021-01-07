@@ -5,7 +5,12 @@ class BeltsController < ApplicationController
   def index
     @belts = Belt.all
 
-    render json: @belts
+    render json: @belts, include: {
+      :student => {
+        :only => [:id, :name]
+      }
+    },
+    except: [:student_id, :created_at, :updated_at]
   end
 
   # GET /belts/1
